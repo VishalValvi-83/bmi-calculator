@@ -6,25 +6,24 @@
   </app-slider>
 
   <div class="input">
-    <label>
-      Height({{ units.height }})
-      <input
-        id="height"
-        min="0"
-        type="number"
-        [(ngModel)]="height"
-        placeholder="0" />
-    </label>
+    <label for="height">Height ({{ units.height }})</label>
+    <input
+      id="height"
+      min="0"
+      type="number"
+      [(ngModel)]="height"
+      placeholder="0" />
 
-    <label>
-      Weight({{ units.weight }})
+    <div>
+      <label for="weight">Weight ({{ units.weight }})</label>
       <input
         id="weight"
         min="0"
         type="number"
         [(ngModel)]="weight"
         placeholder="0" />
-    </label>
+    </div>
+
   </div>
   <button id="calculate" (click)="calculateBMI()">Calculate</button>
   <div class="result">
